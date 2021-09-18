@@ -1,0 +1,672 @@
+<?xml version="1.0" ?>
+<robot name="olympian" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find olympian_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find olympian_description)/urdf/olympian.trans" />
+<xacro:include filename="$(find olympian_description)/urdf/olympian.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.10000000000000034 8.881784197001253e-17 0.05957001251491219"/>
+    <mass value="34.903843895667485"/>
+    <inertia ixx="0.175872" ixy="-0.0" ixz="0.0" iyy="0.164602" iyz="0.0" izz="0.225801"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Pelvis_v4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.498001805406602e-16 0.0500000000000002 0.03191605226834057"/>
+    <mass value="10.30095363483622"/>
+    <inertia ixx="0.029727" ixy="-0.0" ixz="0.0" iyy="0.02765" iyz="0.0" izz="0.014128"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.05 -0.15"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Pelvis_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.05 -0.15"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Pelvis_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Chest_v6_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03750000000000035 -7.105427357601002e-17 0.45087381467752496"/>
+    <mass value="145.13172277947197"/>
+    <inertia ixx="6.773723" ixy="-0.0" ixz="-0.0" iyy="4.667023" iyz="-0.0" izz="4.228166"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0625 -0.0 -0.225"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Chest_v6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0625 -0.0 -0.225"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Chest_v6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_Link_type_b_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.579669976578771e-16 -0.05271922262745299 0.0006659141958417214"/>
+    <mass value="5.046273473916873"/>
+    <inertia ixx="0.006349" ixy="0.0" ixz="0.0" iyy="0.005703" iyz="0.000139" izz="0.007446"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.275 -0.7414"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Link_type_b_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.275 -0.7414"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Link_type_b_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_Roll_Link_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.050000000000000336 1.4970486073018208e-08 -0.030350873813621115"/>
+    <mass value="2.175711504614426"/>
+    <inertia ixx="0.002797" ixy="-0.0" ixz="0.0" iyy="0.007577" iyz="-0.0" izz="0.007735"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 0.35 -0.7289"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Roll_Link_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 0.35 -0.7289"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Roll_Link_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_v8_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.0245584642661925e-16 -7.604189611321033e-09 -0.19774626995834443"/>
+    <mass value="6.439166560687236"/>
+    <inertia ixx="0.118193" ixy="0.0" ixz="0.0" iyy="0.122973" iyz="-0.0" izz="0.024599"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.35 -0.67255"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.35 -0.67255"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_v8_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lower_Arm_v3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.049999999999999475 0.0 -0.18053962725766542"/>
+    <mass value="9.41884357592523"/>
+    <inertia ixx="0.221573" ixy="0.0" ixz="0.0" iyy="0.223321" iyz="0.0" izz="0.024075"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 0.35 -0.30505"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Arm_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 0.35 -0.30505"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Arm_v3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_Link_type_b_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.0816681711721685e-16 0.05271922262745321 0.0006659141958419434"/>
+    <mass value="5.046273473916873"/>
+    <inertia ixx="0.006349" ixy="0.0" ixz="-0.0" iyy="0.005703" iyz="-0.000139" izz="0.007446"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.275 -0.7414"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Link_type_b_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.275 -0.7414"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Link_type_b_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_Roll_Link_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.05000000000000013 1.497048701670778e-08 -0.030350873813620893"/>
+    <mass value="2.175711504614426"/>
+    <inertia ixx="0.002797" ixy="0.0" ixz="0.0" iyy="0.007577" iyz="-0.0" izz="0.007735"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 -0.35 -0.7289"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Roll_Link_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 -0.35 -0.7289"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_Roll_Link_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Arm_v8_3">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.440892098500626e-16 -7.604188889676067e-09 -0.19774626995834454"/>
+    <mass value="6.439166560687236"/>
+    <inertia ixx="0.118193" ixy="0.0" ixz="0.0" iyy="0.122973" iyz="-0.0" izz="0.024599"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.35 -0.67255"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_v8_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.35 -0.67255"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Arm_v8_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lower_Arm_v3_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.05000000000000035 7.216449660063518e-16 -0.18053962725766523"/>
+    <mass value="9.41884357592523"/>
+    <inertia ixx="0.221573" ixy="-0.0" ixz="0.0" iyy="0.223321" iyz="0.0" izz="0.024075"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05 -0.35 -0.30505"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Arm_v3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05 -0.35 -0.30505"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Arm_v3_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Box_Head_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.163336342344337e-17 8.881784197001253e-17 0.12700000029388203"/>
+    <mass value="128.63845239999998"/>
+    <inertia ixx="1.383206" ixy="-0.0" ixz="-0.0" iyy="1.383206" iyz="-0.0" izz="1.383206"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.0 -0.7914"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Box_Head_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.0 -0.7914"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Box_Head_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leg_Pitch_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.3306690738754696e-16 -0.04779855830915972 0.002201441690840286"/>
+    <mass value="11.143265843501238"/>
+    <inertia ixx="0.017501" ixy="-0.0" ixz="0.0" iyy="0.029644" iyz="0.000974" izz="0.029644"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.1 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Pitch_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.1 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Pitch_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leg_Roll_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.07500000000000034 2.7755575615628914e-17 -0.03522306705344444"/>
+    <mass value="7.428843895667491"/>
+    <inertia ixx="0.014788" ixy="0.0" ixz="0.0" iyy="0.049011" iyz="0.0" izz="0.045962"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.025 0.15 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Roll_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.025 0.15 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Roll_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Leg_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="9.71445146547012e-17 5.551115123125783e-17 -0.1397149960614681"/>
+    <mass value="15.877505980409534"/>
+    <inertia ixx="0.244989" ixy="-0.0" ixz="0.0" iyy="0.24065" iyz="0.0" izz="0.08503"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.15 0.025"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Leg_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.15 0.025"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Leg_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lower_Leg_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-17 0.050000000000000155 -0.11213737482236147"/>
+    <mass value="12.32207294390752"/>
+    <inertia ixx="0.15858" ixy="-0.0" ixz="0.0" iyy="0.157094" iyz="0.0" izz="0.021244"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.2 0.3232"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Leg_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.2 0.3232"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Leg_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ankle_Link_v1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030000000000000276 4.163336342344337e-16 -0.015275835790493186"/>
+    <mass value="1.1526300466135975"/>
+    <inertia ixx="0.000552" ixy="0.0" ixz="0.0" iyy="0.000715" iyz="0.0" izz="0.00045"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.07 0.15 0.6764"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Ankle_Link_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.07 0.15 0.6764"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Ankle_Link_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_v2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03625642783113028 0.019685521169741094 -0.04039401004788612"/>
+    <mass value="4.897531572251076"/>
+    <inertia ixx="0.010851" ixy="1.5e-05" ixz="0.000818" iyy="0.030274" iyz="-7e-06" izz="0.039729"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 0.17 0.7114"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Foot_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 0.17 0.7114"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Foot_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leg_Pitch_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5265566588595902e-16 0.047798558309159994 0.0022014416908403833"/>
+    <mass value="11.143265843501238"/>
+    <inertia ixx="0.017501" ixy="-0.0" ixz="0.0" iyy="0.029644" iyz="-0.000974" izz="0.029644"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.1 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Pitch_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.1 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Pitch_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leg_Roll_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.07500000000000034 4.718447854656915e-16 -0.03522306705344429"/>
+    <mass value="7.428843895667491"/>
+    <inertia ixx="0.014788" ixy="-0.0" ixz="0.0" iyy="0.049011" iyz="0.0" izz="0.045962"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.025 -0.15 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Roll_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.025 -0.15 -0.05"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Leg_Roll_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Upper_Leg_v1_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.3877787807814457e-16 4.440892098500626e-16 -0.139714996061468"/>
+    <mass value="15.877505980409534"/>
+    <inertia ixx="0.244989" ixy="-0.0" ixz="0.0" iyy="0.24065" iyz="0.0" izz="0.08503"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.15 0.025"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Leg_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.15 0.025"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Upper_Leg_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lower_Leg_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="4.0245584642661925e-16 -0.04999999999999913 -0.1121373748223618"/>
+    <mass value="12.32207294390752"/>
+    <inertia ixx="0.15858" ixy="0.0" ixz="-0.0" iyy="0.157094" iyz="-0.0" izz="0.021244"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.2 0.3232"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Leg_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.2 0.3232"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Lower_Leg_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Ankle_Link_v1_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.030000000000000485 8.881784197001252e-16 -0.015275835790493186"/>
+    <mass value="1.1526300466135975"/>
+    <inertia ixx="0.000552" ixy="0.0" ixz="0.0" iyy="0.000715" iyz="-0.0" izz="0.00045"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.07 -0.15 0.6764"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Ankle_Link_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.07 -0.15 0.6764"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Ankle_Link_v1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Foot_v2_2">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03625642783112998 -0.02031447883025836 -0.0403940100478859"/>
+    <mass value="4.897531572251076"/>
+    <inertia ixx="0.010851" ixy="1.5e-05" ixz="0.000818" iyy="0.030274" iyz="-7e-06" izz="0.039729"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.1 -0.17 0.7114"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Foot_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver_default"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.1 -0.17 0.7114"/>
+    <geometry>
+      <mesh filename="package://olympian_description/meshes/Foot_v2_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1 -0.05 0.15"/>
+  <parent link="base_link"/>
+  <child link="Pelvis_v4_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0375 0.05 0.075"/>
+  <parent link="Pelvis_v4_1"/>
+  <child link="Chest_v6_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0375 -0.275 0.5164"/>
+  <parent link="Chest_v6_1"/>
+  <child link="Upper_Arm_Link_type_b_v2_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05 -0.075 -0.0125"/>
+  <parent link="Upper_Arm_Link_type_b_v2_1"/>
+  <child link="Upper_Arm_Roll_Link_v2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 0.0 -0.05635"/>
+  <parent link="Upper_Arm_Roll_Link_v2_1"/>
+  <child link="Upper_Arm_v8_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 0.0 -0.3675"/>
+  <parent link="Upper_Arm_v8_1"/>
+  <child link="Lower_Arm_v3_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0375 0.275 0.5164"/>
+  <parent link="Chest_v6_1"/>
+  <child link="Upper_Arm_Link_type_b_v2_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05 0.075 -0.0125"/>
+  <parent link="Upper_Arm_Link_type_b_v2_2"/>
+  <child link="Upper_Arm_Roll_Link_v2_2"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="0.05 0.0 -0.05635"/>
+  <parent link="Upper_Arm_Roll_Link_v2_2"/>
+  <child link="Upper_Arm_v8_3"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.05 0.0 -0.3675"/>
+  <parent link="Upper_Arm_v8_3"/>
+  <child link="Lower_Arm_v3_2"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev11" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0375 0.0 0.5664"/>
+  <parent link="Chest_v6_1"/>
+  <child link="Box_Head_v1_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="Rev12" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1 -0.1 0.05"/>
+  <parent link="base_link"/>
+  <child link="Leg_Pitch_v2_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev13" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.075 -0.05 0.0"/>
+  <parent link="Leg_Pitch_v2_1"/>
+  <child link="Leg_Roll_v2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev14" type="continuous">
+  <origin rpy="0 0 0" xyz="0.075 0.0 -0.075"/>
+  <parent link="Leg_Roll_v2_1"/>
+  <child link="Upper_Leg_v1_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rev15" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.05 -0.2982"/>
+  <parent link="Upper_Leg_v1_1"/>
+  <child link="Lower_Leg_v2_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev16" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.03 0.05 -0.3532"/>
+  <parent link="Lower_Leg_v2_1"/>
+  <child link="Ankle_Link_v1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev19" type="continuous">
+  <origin rpy="0 0 0" xyz="0.03 -0.02 -0.035"/>
+  <parent link="Ankle_Link_v1_1"/>
+  <child link="Foot_v2_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev20" type="continuous">
+  <origin rpy="0 0 0" xyz="0.1 0.1 0.05"/>
+  <parent link="base_link"/>
+  <child link="Leg_Pitch_v2_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev21" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.075 0.05 0.0"/>
+  <parent link="Leg_Pitch_v2_2"/>
+  <child link="Leg_Roll_v2_2"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev22" type="continuous">
+  <origin rpy="0 0 0" xyz="0.075 0.0 -0.075"/>
+  <parent link="Leg_Roll_v2_2"/>
+  <child link="Upper_Leg_v1_2"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="Rev23" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.05 -0.2982"/>
+  <parent link="Upper_Leg_v1_2"/>
+  <child link="Lower_Leg_v2_2"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev24" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.03 -0.05 -0.3532"/>
+  <parent link="Lower_Leg_v2_2"/>
+  <child link="Ankle_Link_v1_2"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev25" type="continuous">
+  <origin rpy="0 0 0" xyz="0.03 0.02 -0.035"/>
+  <parent link="Ankle_Link_v1_2"/>
+  <child link="Foot_v2_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+</robot>
